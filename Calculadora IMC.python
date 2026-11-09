@@ -1,0 +1,25 @@
+print(" Calculadora de IMC ")
+
+nome = input("Digite seu nome: ")
+peso = input("Digite seu peso em kg: ")
+altura = input("Digite sua altura em metros: ")
+
+# Conversão de texto para número decimal 
+peso = float(peso.replace(",", "."))
+altura = float(altura.replace(",", "."))
+
+# Cálculo do IMC
+imc = peso / (altura ** 2)
+
+# Exibição da saudação e do IMC calculado
+print(f"\nOlá, {nome}! Seu IMC calculado é: {imc:.2f}")
+
+# Estruturas condicionais 
+if imc < 18.5:
+    print(" Você está abaixo do peso.")
+elif imc < 25.0:
+    print("Você está com o peso normal, Parabéns!")
+elif imc < 30.0:
+    print("Você está com sobrepeso, vá treinar!")
+else:
+    print(" Você está com obesidade, correee para academia!")
